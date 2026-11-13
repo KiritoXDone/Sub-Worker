@@ -1,0 +1,14 @@
+**/node_modules/
+**/dist/
+bench/state/
+bench/job-state/
+bench/results.json
+bench/job-results.json
+bench/memory-results.json
+bench/cache-results.json
+*.log
+.DS_Store
+.env
+.env.*
+.dev.vars*
+.wrangler/

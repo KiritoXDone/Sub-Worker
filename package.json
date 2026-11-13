@@ -1,0 +1,17 @@
+{
+  "name": "sub-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0",
+  "description": "Sub-Store on Cloudflare Workers: architecture and reproducible local feasibility prototype",
+  "packageManager": "pnpm@11.25.0",
+  "engines": { "node": ">=22.19.0" },
+  "scripts": {
+    "setup:vendor": "pnpm --dir vendor/sub-store/backend install --frozen-lockfile --ignore-scripts",
+    "build:bench": "node bench/build.mjs",
+    "bench": "pnpm run build:bench && node bench/run.mjs && node bench/run-cache-paths.mjs && node bench/run-jobs.mjs",
+    "bench:jobs": "node bench/run-jobs.mjs"
+  },
+  "dependencies": { "miniflare": "4.20260730.0" }
+}

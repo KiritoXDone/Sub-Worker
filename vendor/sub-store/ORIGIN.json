@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/kasumikira/sub-worker",
+  "commit": "413d06ff23d7f61201c509fc01fdda2a6c0aed1e",
+  "version": "2.44.2",
+  "upstream": "https://github.com/sub-store-org/Sub-Store",
+  "latestUpstreamInspected": "196a6d56db75e10942d6338ecf90f7dce65ec5c1",
+  "license": "AGPL-3.0",
+  "modified": false
+}

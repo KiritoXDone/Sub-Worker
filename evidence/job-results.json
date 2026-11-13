@@ -1,0 +1,507 @@
+{
+  "nodeCount": 999,
+  "batchSize": 40,
+  "concurrency": 4,
+  "syntheticNetworkDelayMs": 5,
+  "checks": [
+    {
+      "name": "job-checkpoint-survives-restart",
+      "passed": true,
+      "cursor": 80
+    },
+    {
+      "name": "999-requests-fit-25-batches",
+      "passed": true
+    },
+    {
+      "name": "warm-geo-cache-needs-no-http",
+      "passed": true
+    }
+  ],
+  "cold": {
+    "report": {
+      "job": {
+        "id": 1,
+        "cursor": 999,
+        "total": 999,
+        "automatic": 1
+      },
+      "rows": 999,
+      "databaseBytes": 40960,
+      "batches": [
+        {
+          "seq": 0,
+          "start_cursor": 0,
+          "end_cursor": 40,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 117
+        },
+        {
+          "seq": 1,
+          "start_cursor": 40,
+          "end_cursor": 80,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 112
+        },
+        {
+          "seq": 2,
+          "start_cursor": 80,
+          "end_cursor": 120,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 102
+        },
+        {
+          "seq": 3,
+          "start_cursor": 120,
+          "end_cursor": 160,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 100
+        },
+        {
+          "seq": 4,
+          "start_cursor": 160,
+          "end_cursor": 200,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 102
+        },
+        {
+          "seq": 5,
+          "start_cursor": 200,
+          "end_cursor": 240,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 109
+        },
+        {
+          "seq": 6,
+          "start_cursor": 240,
+          "end_cursor": 280,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 111
+        },
+        {
+          "seq": 7,
+          "start_cursor": 280,
+          "end_cursor": 320,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 105
+        },
+        {
+          "seq": 8,
+          "start_cursor": 320,
+          "end_cursor": 360,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 155
+        },
+        {
+          "seq": 9,
+          "start_cursor": 360,
+          "end_cursor": 400,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 106
+        },
+        {
+          "seq": 10,
+          "start_cursor": 400,
+          "end_cursor": 440,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 111
+        },
+        {
+          "seq": 11,
+          "start_cursor": 440,
+          "end_cursor": 480,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 100
+        },
+        {
+          "seq": 12,
+          "start_cursor": 480,
+          "end_cursor": 520,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 97
+        },
+        {
+          "seq": 13,
+          "start_cursor": 520,
+          "end_cursor": 560,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 100
+        },
+        {
+          "seq": 14,
+          "start_cursor": 560,
+          "end_cursor": 600,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 98
+        },
+        {
+          "seq": 15,
+          "start_cursor": 600,
+          "end_cursor": 640,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 105
+        },
+        {
+          "seq": 16,
+          "start_cursor": 640,
+          "end_cursor": 680,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 92
+        },
+        {
+          "seq": 17,
+          "start_cursor": 680,
+          "end_cursor": 720,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 95
+        },
+        {
+          "seq": 18,
+          "start_cursor": 720,
+          "end_cursor": 760,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 101
+        },
+        {
+          "seq": 19,
+          "start_cursor": 760,
+          "end_cursor": 800,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 111
+        },
+        {
+          "seq": 20,
+          "start_cursor": 800,
+          "end_cursor": 840,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 93
+        },
+        {
+          "seq": 21,
+          "start_cursor": 840,
+          "end_cursor": 880,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 95
+        },
+        {
+          "seq": 22,
+          "start_cursor": 880,
+          "end_cursor": 920,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 88
+        },
+        {
+          "seq": 23,
+          "start_cursor": 920,
+          "end_cursor": 960,
+          "fetches": 40,
+          "rows_read": 82,
+          "rows_written": 42,
+          "elapsed_ms": 95
+        },
+        {
+          "seq": 24,
+          "start_cursor": 960,
+          "end_cursor": 999,
+          "fetches": 39,
+          "rows_read": 80,
+          "rows_written": 41,
+          "elapsed_ms": 85
+        }
+      ]
+    },
+    "totalHttpCalls": 999,
+    "remaining919WallMs": 2956.7881820000002,
+    "remaining919ProcessCpuMs": 860
+  },
+  "warm": {
+    "report": {
+      "job": {
+        "id": 1,
+        "cursor": 999,
+        "total": 999,
+        "automatic": 1
+      },
+      "rows": 999,
+      "databaseBytes": 40960,
+      "batches": [
+        {
+          "seq": 0,
+          "start_cursor": 0,
+          "end_cursor": 40,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 1,
+          "start_cursor": 40,
+          "end_cursor": 80,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 2,
+          "start_cursor": 80,
+          "end_cursor": 120,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 3,
+          "start_cursor": 120,
+          "end_cursor": 160,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 4,
+          "start_cursor": 160,
+          "end_cursor": 200,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 2
+        },
+        {
+          "seq": 5,
+          "start_cursor": 200,
+          "end_cursor": 240,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 2
+        },
+        {
+          "seq": 6,
+          "start_cursor": 240,
+          "end_cursor": 280,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 7,
+          "start_cursor": 280,
+          "end_cursor": 320,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 8,
+          "start_cursor": 320,
+          "end_cursor": 360,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 9,
+          "start_cursor": 360,
+          "end_cursor": 400,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 10,
+          "start_cursor": 400,
+          "end_cursor": 440,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 11,
+          "start_cursor": 440,
+          "end_cursor": 480,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 12,
+          "start_cursor": 480,
+          "end_cursor": 520,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 13,
+          "start_cursor": 520,
+          "end_cursor": 560,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 0
+        },
+        {
+          "seq": 14,
+          "start_cursor": 560,
+          "end_cursor": 600,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 2
+        },
+        {
+          "seq": 15,
+          "start_cursor": 600,
+          "end_cursor": 640,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 16,
+          "start_cursor": 640,
+          "end_cursor": 680,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 17,
+          "start_cursor": 680,
+          "end_cursor": 720,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 4
+        },
+        {
+          "seq": 18,
+          "start_cursor": 720,
+          "end_cursor": 760,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 2
+        },
+        {
+          "seq": 19,
+          "start_cursor": 760,
+          "end_cursor": 800,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 20,
+          "start_cursor": 800,
+          "end_cursor": 840,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 3
+        },
+        {
+          "seq": 21,
+          "start_cursor": 840,
+          "end_cursor": 880,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 3
+        },
+        {
+          "seq": 22,
+          "start_cursor": 880,
+          "end_cursor": 920,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        },
+        {
+          "seq": 23,
+          "start_cursor": 920,
+          "end_cursor": 960,
+          "fetches": 0,
+          "rows_read": 42,
+          "rows_written": 2,
+          "elapsed_ms": 2
+        },
+        {
+          "seq": 24,
+          "start_cursor": 960,
+          "end_cursor": 999,
+          "fetches": 0,
+          "rows_read": 41,
+          "rows_written": 2,
+          "elapsed_ms": 1
+        }
+      ]
+    },
+    "httpCalls": 0,
+    "wallMs": 760.2486989999998,
+    "processCpuMs": 80
+  },
+  "maxInflightHttp": 4,
+  "statusPollRequests": 31
+}

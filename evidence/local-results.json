@@ -1,0 +1,4155 @@
+{
+  "date": "2026-11-13T08:47:35.131Z",
+  "nodes": 999,
+  "repeats": 12,
+  "source": {
+    "repo": "kasumikira/sub-worker",
+    "sha": "413d06ff23d7f61201c509fc01fdda2a6c0aed1e",
+    "version": "2.44.2",
+    "miniflare": "4.20260730.0",
+    "workerd": "1.20260730.1",
+    "quickjs": "0.32.0",
+    "compatibilityDate": "2026-07-30"
+  },
+  "environment": {
+    "node": "v26.8.1",
+    "cpu": "Intel(R) Core(TM) i5-1038NG7 CPU @ 2.00GHz",
+    "platform": "darwin",
+    "arch": "x64"
+  },
+  "method": {
+    "cpu": "Delta of macOS ps cumulative CPU for descendant workerd process, divided by batch request count; ps resolution 10ms. Includes local runtime/storage overhead, excludes Node harness. NOT Cloudflare billed CPU.",
+    "elapsed": "End-to-end local wall time; DO elapsed includes waiting. These are NOT CPU timings.",
+    "memory": "CDP heap snapshots plus QuickJS live guest allocation and WASM linear-memory snapshots. NOT production isolate peak. RSS is whole workerd process.",
+    "network": "All external HTTP handled by local fixtures; no real provider traffic. Geo fixture adds a synthetic 5ms wait.",
+    "modifications": [
+      "benchmark wrapper and SQL counters",
+      "console output suppressed",
+      "HTTP bridge with 40-call budget",
+      "QuickJS interrupt callback budget of 2000 across async segments",
+      "QuickJS memory observation before disposal",
+      "explicit script failure propagated as HTTP 422",
+      "request-scoped download memo",
+      "forced GC outside timed batches to distinguish retained memory"
+    ],
+    "input": "999 unique synthetic SS/Trojan/VLESS endpoints; 333 each. Passwords and addresses are fake."
+  },
+  "cases": [
+    {
+      "name": "uri-to-json",
+      "cpuMsPerRequest": 153.33333333333334,
+      "wallMedianMs": 162.83044700000028,
+      "wallP95Ms": 195.2507559999999,
+      "outputBytes": 334224,
+      "mockHttpCalls": 0,
+      "heapAfter": {
+        "usedSize": 24241992,
+        "totalSize": 57053184,
+        "embedderHeapUsedSize": 112592,
+        "backingStorageSize": 750177
+      },
+      "heapAfterGc": {
+        "usedSize": 7331620,
+        "totalSize": 8224768,
+        "embedderHeapUsedSize": 108592,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 113332224,
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 184.88326199999983,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 172
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 185.98312999999962,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 177
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 166.89313599999969,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 157
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 170.2528580000003,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 155
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 162.83044700000028,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 155
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 169.67474700000002,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 162
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 195.2507559999999,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 186
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 141.33741899999995,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 134
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 143.26862599999959,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 136
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 128.8319590000001,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 123
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 133.4034329999995,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 127
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 334224,
+          "wallMs": 151.5199589999993,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 142
+          }
+        }
+      ]
+    },
+    {
+      "name": "uri-to-mihomo",
+      "cpuMsPerRequest": 146.66666666666666,
+      "wallMedianMs": 151.03667300000052,
+      "wallP95Ms": 174.82775700000002,
+      "outputBytes": 229336,
+      "mockHttpCalls": 0,
+      "heapAfter": {
+        "usedSize": 21728944,
+        "totalSize": 54358016,
+        "embedderHeapUsedSize": 108592,
+        "backingStorageSize": 746337
+      },
+      "heapAfterGc": {
+        "usedSize": 7326244,
+        "totalSize": 8224768,
+        "embedderHeapUsedSize": 89872,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 113586176,
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 161.2415520000004,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 155
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 174.82775700000002,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 168
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 158.76046399999996,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 152
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 161.96818200000052,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 156
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 159.888954,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 154
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 156.9425169999995,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 151
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 140.86409000000003,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 136
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 144.99403299999994,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 139
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 148.72586299999966,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 143
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 139.48578699999962,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 132
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 145.70823999999993,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 136
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 151.03667300000052,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 142
+          }
+        }
+      ]
+    },
+    {
+      "name": "base64-to-mihomo",
+      "cpuMsPerRequest": 140.83333333333334,
+      "wallMedianMs": 143.61443999999938,
+      "wallP95Ms": 155.04640800000016,
+      "outputBytes": 229336,
+      "mockHttpCalls": 0,
+      "heapAfter": {
+        "usedSize": 23413368,
+        "totalSize": 57970688,
+        "embedderHeapUsedSize": 89872,
+        "backingStorageSize": 746337
+      },
+      "heapAfterGc": {
+        "usedSize": 7392868,
+        "totalSize": 8269824,
+        "embedderHeapUsedSize": 70192,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 115343360,
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 151.52322300000014,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 146
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 155.04640800000016,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 149
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 151.3262360000008,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 145
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 145.07601299999988,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 140
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 143.61443999999938,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 137
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 149.70916699999907,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 143
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 148.5615230000003,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 139
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 136.88290700000107,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 131
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 140.80862499999967,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 134
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 135.544672,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 129
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 135.70330899999863,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 130
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 135.39739799999916,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1002,
+            "errors": [],
+            "localDoElapsedMs": 130
+          }
+        }
+      ]
+    },
+    {
+      "name": "yaml-to-mihomo",
+      "cpuMsPerRequest": 305,
+      "wallMedianMs": 253.3421899999994,
+      "wallP95Ms": 756.9536480000006,
+      "outputBytes": 229336,
+      "mockHttpCalls": 0,
+      "heapAfter": {
+        "usedSize": 94590124,
+        "totalSize": 143593472,
+        "embedderHeapUsedSize": 68544,
+        "backingStorageSize": 746337
+      },
+      "heapAfterGc": {
+        "usedSize": 8917268,
+        "totalSize": 10297344,
+        "embedderHeapUsedSize": 120992,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 234381312,
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 252.15234500000042,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 233
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 243.32924999999886,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 237
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 478.9840290000011,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 431
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 394.45598599999903,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 337
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 756.9536480000006,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 733
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 240.58622500000274,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 235
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 246.90233799999987,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 240
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 258.4867710000035,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 252
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 347.07604100000026,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 331
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 253.3421899999994,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 239
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 231.63583500000095,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 227
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 256.79150700000173,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 4,
+            "errors": [],
+            "localDoElapsedMs": 251
+          }
+        }
+      ]
+    },
+    {
+      "name": "three-built-in-operations",
+      "cpuMsPerRequest": 177.5,
+      "wallMedianMs": 180.1236910000007,
+      "wallP95Ms": 346.3041830000002,
+      "outputBytes": 233332,
+      "mockHttpCalls": 0,
+      "heapAfter": {
+        "usedSize": 40414112,
+        "totalSize": 63934464,
+        "embedderHeapUsedSize": 120992,
+        "backingStorageSize": 756327
+      },
+      "heapAfterGc": {
+        "usedSize": 8628484,
+        "totalSize": 9719808,
+        "embedderHeapUsedSize": 100952,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 130940928,
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 167.92808199999854,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 161
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 324.3636320000005,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 313
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 190.1775749999979,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 182
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 173.9262920000001,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 168
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 180.1236910000007,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 171
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 165.97619099999793,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 161
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 198.68257399999857,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 193
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 346.3041830000002,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 334
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 194.21126699999877,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 185
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 189.5939929999986,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 182
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 165.66141499999867,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 157
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 167.92370799999844,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 162
+          }
+        }
+      ]
+    },
+    {
+      "name": "one-quickjs-script",
+      "cpuMsPerRequest": 234.16666666666666,
+      "wallMedianMs": 233.732466999998,
+      "wallP95Ms": 403.39594900000156,
+      "outputBytes": 237218,
+      "mockHttpCalls": 0,
+      "heapAfter": {
+        "usedSize": 32050844,
+        "totalSize": 61329408,
+        "embedderHeapUsedSize": 97992,
+        "backingStorageSize": 746349
+      },
+      "heapAfterGc": {
+        "usedSize": 9071332,
+        "totalSize": 9981952,
+        "embedderHeapUsedSize": 79952,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 139149312,
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 266.13628600000084,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 256
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 234.15490299999874,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 225
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 206.71719599999778,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 201
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 200.8178939999998,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 194
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 194.2428179999988,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 186
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 403.39594900000156,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 396
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 178.03733400000056,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 171
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 175.7047300000013,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 168
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 344.47469799999817,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 324
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 368.78767399999924,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 360
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 383.4071909999984,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 375
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 237218,
+          "wallMs": 233.732466999998,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 901776,
+                  "malloc_count": 15965,
+                  "memory_used_count": 15848,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519345,
+                  "obj_count": 2864,
+                  "obj_size": 137472,
+                  "prop_count": 15061,
+                  "prop_size": 152872,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 227
+          }
+        }
+      ]
+    },
+    {
+      "name": "three-quickjs-scripts",
+      "cpuMsPerRequest": 327.5,
+      "wallMedianMs": 329.632034000002,
+      "wallP95Ms": 394.60071499999685,
+      "outputBytes": 252982,
+      "mockHttpCalls": 0,
+      "heapAfter": {
+        "usedSize": 38065952,
+        "totalSize": 101601280,
+        "embedderHeapUsedSize": 79952,
+        "backingStorageSize": 746349
+      },
+      "heapAfterGc": {
+        "usedSize": 9080400,
+        "totalSize": 9981952,
+        "embedderHeapUsedSize": 59312,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 184066048,
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 367.38995799999975,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 359
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 360.90469400000075,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 347
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 381.29208500000095,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 374
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 394.60071499999685,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 387
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 326.504025000002,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 318
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 312.75932199999806,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 304
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 312.07523899999796,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 305
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 314.1331169999976,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 305
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 299.6882010000045,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 287
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 353.2742720000024,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 345
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 366.80583599999954,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 360
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 252982,
+          "wallMs": 329.632034000002,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902428,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 519725,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 918192,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 535489,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              },
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 933956,
+                  "malloc_count": 15979,
+                  "memory_used_count": 15862,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8105,
+                  "str_size": 551253,
+                  "obj_count": 2868,
+                  "obj_size": 137664,
+                  "prop_count": 15069,
+                  "prop_size": 152936,
+                  "shape_count": 268,
+                  "shape_size": 44120,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 211,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1006,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 322
+          }
+        }
+      ]
+    },
+    {
+      "name": "quickjs-one-http-call",
+      "cpuMsPerRequest": 245,
+      "wallMedianMs": 265.29591300000175,
+      "wallP95Ms": 586.2761919999975,
+      "outputBytes": 232333,
+      "mockHttpCalls": 12,
+      "heapAfter": {
+        "usedSize": 26895760,
+        "totalSize": 60133376,
+        "embedderHeapUsedSize": 44432,
+        "backingStorageSize": 746353
+      },
+      "heapAfterGc": {
+        "usedSize": 9124088,
+        "totalSize": 9981952,
+        "embedderHeapUsedSize": 43704,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 135839744,
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 274.94777100000647,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 267
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 271.4753700000001,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 256
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 210.7688330000019,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 204
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 239.42100599999685,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 230
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 235.10210299999744,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 226
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 263.3239840000024,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 257
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 265.29591300000175,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 258
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 323.7383069999996,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 298
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 448.87667800000054,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 437
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 242.57952099999966,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 235
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 586.2761919999975,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 572
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 232333,
+          "wallMs": 275.2732279999982,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 1,
+            "quickjs": [
+              {
+                "guest": {
+                  "malloc_limit": 33554432,
+                  "memory_used_size": 902127,
+                  "malloc_count": 15971,
+                  "memory_used_count": 15853,
+                  "atom_count": 906,
+                  "atom_size": 29501,
+                  "str_count": 8099,
+                  "str_size": 519472,
+                  "obj_count": 2866,
+                  "obj_size": 137568,
+                  "prop_count": 15066,
+                  "prop_size": 152912,
+                  "shape_count": 269,
+                  "shape_size": 44208,
+                  "js_func_count": 1,
+                  "js_func_size": 238,
+                  "js_func_code_size": 28,
+                  "js_func_pc2line_count": 1,
+                  "js_func_pc2line_size": 16,
+                  "c_func_count": 212,
+                  "array_count": 6,
+                  "fast_array_count": 6,
+                  "fast_array_elements": 1004,
+                  "binary_object_count": 0,
+                  "binary_object_size": 0
+                },
+                "wasmLinearBytes": 16777216,
+                "budget": {
+                  "callbacks": 1,
+                  "limit": 2000
+                }
+              }
+            ],
+            "logCallsSuppressed": 1001,
+            "errors": [],
+            "localDoElapsedMs": 268
+          }
+        }
+      ]
+    },
+    {
+      "name": "three-remote-sources-cache-hit",
+      "cpuMsPerRequest": 308.3333333333333,
+      "wallMedianMs": 288.99289500000305,
+      "wallP95Ms": 663.0247020000024,
+      "outputBytes": 233332,
+      "mockHttpCalls": 0,
+      "heapAfter": {
+        "usedSize": 26475976,
+        "totalSize": 58130432,
+        "embedderHeapUsedSize": 37904,
+        "backingStorageSize": 750207
+      },
+      "heapAfterGc": {
+        "usedSize": 9198592,
+        "totalSize": 10104832,
+        "embedderHeapUsedSize": 36592,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 118501376,
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 301.63142199999857,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 294
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 312.3838360000009,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 303
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 276.3310899999997,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 265
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 339.79261399999814,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 334
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 424.5706169999976,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 415
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 663.0247020000024,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 653
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 288.99289500000305,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 282
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 288.7521889999989,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 280
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 257.3761779999986,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 248
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 277.9105070000005,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 272
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 260.95103400000517,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 254
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 300.12849899999856,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 2009,
+            "errors": [],
+            "localDoElapsedMs": 294
+          }
+        }
+      ]
+    },
+    {
+      "name": "sqlite-output-cache-hit",
+      "cpuMsPerRequest": 5,
+      "wallMedianMs": 7.5665289999960805,
+      "wallP95Ms": 21.037986000003002,
+      "outputBytes": 229336,
+      "mockHttpCalls": 0,
+      "heapAfter": {
+        "usedSize": 9737560,
+        "totalSize": 10821632,
+        "embedderHeapUsedSize": 36592,
+        "backingStorageSize": 746337
+      },
+      "heapAfterGc": {
+        "usedSize": 9195440,
+        "totalSize": 10104832,
+        "embedderHeapUsedSize": 77064,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 72019968,
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 15.763300999999046,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 1
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 9.8516940000045,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 1
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 6.437372000000323,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 1
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 7.734529000001203,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 2
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 7.445829999996931,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 1
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 7.4217829999979585,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 1
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 7.5665289999960805,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 1
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 21.037986000003002,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 3
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 14.820050000002084,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 1
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 6.269234999999753,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 1
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 6.945493999999599,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 1
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 9.569297999994888,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 2
+          }
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "999-http-script-budget",
+      "passed": true,
+      "status": 422,
+      "fetches": 40,
+      "excerpt": "{\"status\":\"failed\",\"error\":\"HTTP_BUDGET_EXCEEDED: 40 calls per invocation\\n    at operator (eval.js:6:46)\\n\"}"
+    },
+    {
+      "name": "quickjs-infinite-loop-with-frozen-host-and-guest-clocks",
+      "passed": true,
+      "status": 422,
+      "wallMs": 497.4236549999987,
+      "metrics": {
+        "sqlRowsRead": 1,
+        "sqlRowsWritten": 0,
+        "fetches": 0,
+        "quickjs": [
+          {
+            "guest": {
+              "malloc_limit": 33554432,
+              "memory_used_size": 901815,
+              "malloc_count": 15968,
+              "memory_used_count": 15852,
+              "atom_count": 907,
+              "atom_size": 29538,
+              "str_count": 8100,
+              "str_size": 519311,
+              "obj_count": 2863,
+              "obj_size": 137424,
+              "prop_count": 15060,
+              "prop_size": 152856,
+              "shape_count": 268,
+              "shape_size": 44120,
+              "js_func_count": 2,
+              "js_func_size": 334,
+              "js_func_code_size": 30,
+              "js_func_pc2line_count": 2,
+              "js_func_pc2line_size": 18,
+              "c_func_count": 209,
+              "array_count": 6,
+              "fast_array_count": 6,
+              "fast_array_elements": 1004,
+              "binary_object_count": 0,
+              "binary_object_size": 0
+            },
+            "wasmLinearBytes": 16777216,
+            "budget": {
+              "callbacks": 2000,
+              "limit": 2000
+            }
+          },
+          {
+            "guest": {
+              "malloc_limit": 33554432,
+              "memory_used_size": 901928,
+              "malloc_count": 15973,
+              "memory_used_count": 15855,
+              "atom_count": 908,
+              "atom_size": 29559,
+              "str_count": 8100,
+              "str_size": 519311,
+              "obj_count": 2866,
+              "obj_size": 137568,
+              "prop_count": 15067,
+              "prop_size": 152904,
+              "shape_count": 268,
+              "shape_size": 44120,
+              "js_func_count": 1,
+              "js_func_size": 238,
+              "js_func_code_size": 28,
+              "js_func_pc2line_count": 1,
+              "js_func_pc2line_size": 16,
+              "c_func_count": 213,
+              "array_count": 6,
+              "fast_array_count": 6,
+              "fast_array_elements": 1004,
+              "binary_object_count": 0,
+              "binary_object_size": 0
+            },
+            "wasmLinearBytes": 16777216,
+            "budget": {
+              "callbacks": 2,
+              "limit": 2000
+            }
+          }
+        ],
+        "logCallsSuppressed": 1002,
+        "errors": [
+          "[sub-store] ERROR: Cannot apply operator Script Operator(function operator)! Reason: Error: interrupted\n    at operator (eval.js:4:34)\n    at <anonymous> (eval.js:8:32)\n    at <eval> (eval.js:9:15)\n"
+        ],
+        "localDoElapsedMs": 494
+      },
+      "excerpt": "{\"status\":\"failed\",\"error\":\"interrupted\\n    at operator (eval.js:4:34)\\n    at <anonymous> (eval.js:8:32)\\n    at <eval> (eval.js:9:15)\\n\"}"
+    },
+    {
+      "name": "concurrent-patches-preserve-both-fields",
+      "passed": true
+    },
+    {
+      "name": "sqlite-survives-workerd-restart",
+      "passed": true,
+      "nodes": 999,
+      "wallMs": 1366.355908999998
+    }
+  ],
+  "runtimeReadyMs": 1086.3102900000001,
+  "firstDownload": {
+    "status": 200,
+    "bytes": 229336,
+    "wallMs": 147.42699399999992,
+    "metrics": {
+      "sqlRowsRead": 1,
+      "sqlRowsWritten": 0,
+      "fetches": 0,
+      "quickjs": [],
+      "logCallsSuppressed": 1001,
+      "errors": [],
+      "localDoElapsedMs": 136
+    }
+  },
+  "inputBytes": {
+    "uri": 135420,
+    "base64": 180560,
+    "yaml": 229336
+  },
+  "database": {
+    "databaseBytes": 733184
+  },
+  "bundleBytes": 1481703
+}

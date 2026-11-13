@@ -1,0 +1,90 @@
+{
+  "note": "Initial local allocation observation before between-case GC diagnostics; not a production peak or a pass/fail of Cloudflare memory enforcement.",
+  "source": {
+    "repo": "kasumikira/sub-worker",
+    "sha": "413d06ff23d7f61201c509fc01fdda2a6c0aed1e",
+    "version": "2.44.2",
+    "miniflare": "4.20260730.0",
+    "workerd": "1.20260730.1",
+    "quickjs": "0.32.0",
+    "compatibilityDate": "2026-07-30"
+  },
+  "environment": {
+    "node": "v26.8.1",
+    "cpu": "Intel(R) Core(TM) i5-1038NG7 CPU @ 2.00GHz",
+    "platform": "darwin",
+    "arch": "x64"
+  },
+  "cases": [
+    {
+      "name": "uri-to-json",
+      "heapAfter": {
+        "usedSize": 32932116,
+        "totalSize": 57249792,
+        "embedderHeapUsedSize": 257936,
+        "backingStorageSize": 756327
+      },
+      "processRssAfterBytes": 111943680
+    },
+    {
+      "name": "uri-to-mihomo",
+      "heapAfter": {
+        "usedSize": 30878816,
+        "totalSize": 66220032,
+        "embedderHeapUsedSize": 111432,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 123146240
+    },
+    {
+      "name": "base64-to-mihomo",
+      "heapAfter": {
+        "usedSize": 60632968,
+        "totalSize": 109371392,
+        "embedderHeapUsedSize": 111432,
+        "backingStorageSize": 1037157
+      },
+      "processRssAfterBytes": 169512960
+    },
+    {
+      "name": "yaml-to-mihomo",
+      "heapAfter": {
+        "usedSize": 238455804,
+        "totalSize": 304328704,
+        "embedderHeapUsedSize": 77672,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 375267328
+    },
+    {
+      "name": "three-built-in-operations",
+      "heapAfter": {
+        "usedSize": 42310084,
+        "totalSize": 128843776,
+        "embedderHeapUsedSize": 54112,
+        "backingStorageSize": 747597
+      },
+      "processRssAfterBytes": 354304000
+    },
+    {
+      "name": "one-quickjs-script",
+      "heapAfter": {
+        "usedSize": 45253916,
+        "totalSize": 139079680,
+        "embedderHeapUsedSize": 54112,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 377143296
+    },
+    {
+      "name": "three-quickjs-scripts",
+      "heapAfter": {
+        "usedSize": 55344948,
+        "totalSize": 149983232,
+        "embedderHeapUsedSize": 54112,
+        "backingStorageSize": 746337
+      },
+      "processRssAfterBytes": 238960640
+    }
+  ]
+}

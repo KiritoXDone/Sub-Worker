@@ -1,0 +1,14 @@
+{
+  "bench/build.mjs": "376ba067059c70800ad98b7e99f02876f175d6ff245e5aa6ac416f1a4a0d0d12",
+  "bench/enrichment-worker.mjs": "972d2ede5f12c23c66242d5bb381db0475ed49d519003ab56992268ae6d02039",
+  "bench/execution-budget.mjs": "a00361a18d5e0d66528db14327a5e991bab453e4d331916149d3f0bebd00fd18",
+  "bench/fixtures.mjs": "d95cc137b12133a36e005faa2e9f982cee383922d8e7d76fa4d6dc61e699e855",
+  "bench/http-bridge.mjs": "2fb40bf8600f35b9facae27843f9a6054bbf7dcc21c6cf9dee8500ef7e31653a",
+  "bench/local-runtime.mjs": "bcf488eacb9dd7b1f57ef28c649662f2aeffcbf5dbb38caf2cad785bc960c841",
+  "bench/metrics.mjs": "7e2cb0703fd493c7622e52ffda6c4b83f758f3f0358d553caea649621d248419",
+  "bench/request-state.mjs": "05b412f74a37dbf5303850d636db36f59e2095e4db5c65cc50c3a4a759e5a50c",
+  "bench/run-cache-paths.mjs": "af60977e30ecb50aa8b9f95197b4938f962af91a3506dbcb875961214fe2d29e",
+  "bench/run-jobs.mjs": "7d6e6441cf5fec2b0729d8744b416f23419aef55d4559ba8fff8c52e33a2d933",
+  "bench/run.mjs": "f57fa78ff56ccb245192f2105c9791dce87f8306fc8d0cc47eabea68d367310f",
+  "bench/worker-entry.mjs": "e1e87926d50d55554061cb67bf25724502b9d089773755ddeba7673b15bd320f"
+}

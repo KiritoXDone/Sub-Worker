@@ -1,0 +1,384 @@
+{
+  "nodes": 999,
+  "repeats": 12,
+  "cases": [
+    {
+      "name": "sqlite-normalized-cache-to-mihomo",
+      "cpuMsPerRequest": 12.5,
+      "wallMedianMs": 16.218066000000363,
+      "wallP95Ms": 34.79259699999966,
+      "mockHttpCalls": 0,
+      "heapAfter": {
+        "usedSize": 16420760,
+        "totalSize": 31698944,
+        "embedderHeapUsedSize": 257936,
+        "backingStorageSize": 746337
+      },
+      "heapAfterGc": {
+        "usedSize": 7212048,
+        "totalSize": 7962624,
+        "embedderHeapUsedSize": 108472,
+        "backingStorageSize": 746337
+      },
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 34.79259699999966,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 10
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 14.9389699999997,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 8
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 17.462406999999985,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 9
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 17.345612000000074,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 10
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 16.218066000000363,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 10
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 12.13927700000022,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 7
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 14.130163000000266,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 9
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 17.86865300000045,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 12
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 15.173757000000478,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 9
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 14.58443299999999,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 9
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 17.819032000000334,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 10
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 229336,
+          "wallMs": 17.51271900000029,
+          "metrics": {
+            "sqlRowsRead": 1,
+            "sqlRowsWritten": 0,
+            "fetches": 0,
+            "quickjs": [],
+            "logCallsSuppressed": 0,
+            "errors": [],
+            "localDoElapsedMs": 10
+          }
+        }
+      ]
+    },
+    {
+      "name": "three-remote-sources-forced-network",
+      "cpuMsPerRequest": 254.16666666666666,
+      "wallMedianMs": 267.63869199999954,
+      "wallP95Ms": 332.550166,
+      "mockHttpCalls": 36,
+      "heapAfter": {
+        "usedSize": 27325496,
+        "totalSize": 57016320,
+        "embedderHeapUsedSize": 108472,
+        "backingStorageSize": 746367
+      },
+      "heapAfterGc": {
+        "usedSize": 7346400,
+        "totalSize": 7946240,
+        "embedderHeapUsedSize": 73832,
+        "backingStorageSize": 746337
+      },
+      "samples": [
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 210.29136300000027,
+          "metrics": {
+            "sqlRowsRead": 2,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 201
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 212.78779399999985,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 201
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 227.1324279999999,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 216
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 267.63869199999954,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 255
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 286.1612809999997,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 272
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 306.7079910000002,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 293
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 332.550166,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 316
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 297.05750999999964,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 286
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 276.13306400000056,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 263
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 272.0783510000001,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 259
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 259.2807150000008,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 246
+          }
+        },
+        {
+          "status": 200,
+          "bytes": 233332,
+          "wallMs": 256.0687909999997,
+          "metrics": {
+            "sqlRowsRead": 0,
+            "sqlRowsWritten": 4,
+            "fetches": 3,
+            "quickjs": [],
+            "logCallsSuppressed": 2012,
+            "errors": [],
+            "localDoElapsedMs": 242
+          }
+        }
+      ]
+    }
+  ]
+}
